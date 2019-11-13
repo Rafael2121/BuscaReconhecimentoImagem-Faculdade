@@ -17,3 +17,5 @@ Se for desejo, é só alterar as variáveis match_value(parâmetro de similarida
 ```
 python searcher.py
 ```
+## Detalhe importante
+# O diretório de busca por padrão está vazio, coloque os arquivos que você deseja procurar dentro dele
