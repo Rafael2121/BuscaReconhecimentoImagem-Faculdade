@@ -23,7 +23,10 @@ class searcher:
         else:
             self.call_searcher()
             self.matches.sort(key=lambda x: x[2], reverse=True)
-            for m in self.matches[25:]:
+            # Deleta o primeiro item, que é o próprio template que você buscou
+            if self.matches:
+                del self.matches[0]
+            for m in self.matches[:25]:
                 print(m)
         
         print("Finalizado")
@@ -95,5 +98,5 @@ class searcher:
 
 
 if __name__ == "__main__":
-    s = searcher(template_name="serie_face_4.jpg")
+    s = searcher(template_name="serie_face_4.jpg", print_similar=False)
     s.run()
